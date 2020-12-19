@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+/************************************************NAV BAR*************************************************/
+nav {
+    width: 100vw;
+    height: 10vh;
+}
+
+ul {
+    float: right;
+}
+
+li {
+    list-style: none;
+    float: left;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+}
+
+#apps {
+    height: 30px;
+}
+
+#user {
+   height: 32px;
+   width: 32px;
+   border-radius: 50%;
+}
+
+.text-link:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+/*************************************************GOOGLE LOGO**********************************/
+#logo-section {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    height: 150px;
+    padding-top: 10vh;
+}
+
+
+
+
+
