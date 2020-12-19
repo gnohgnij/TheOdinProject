@@ -43,6 +43,7 @@ li a {
 }
 
 /*************************************************GOOGLE LOGO**********************************/
+
 #logo-section {
     width: 100vw;
     display: flex;
@@ -52,6 +53,20 @@ li a {
 #logo {
     height: 150px;
     padding-top: 10vh;
+}
+
+/*************************************************SEARCH BAR*********************************/
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    height: 40px;
+    width: 45vw;
+    border-style: none;
+    border: lightgrey;
 }
 
 
