@@ -1,4 +1,4 @@
-## Rock, Paper Scissors
+## Rock, Paper, Scissors
 
 This is project 2 of **The Odin Project**
 
