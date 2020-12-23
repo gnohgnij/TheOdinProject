@@ -1,0 +1,75 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    font-size: 60px;
+    margin: 0;
+}
+
+#subtitle {
+    display: flex;
+    justify-content: space-around;
+}
+
+h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+#vs {
+    color: red;
+}
+
+#scores {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#grid-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#human img {
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+#computer img {
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    background-color: white;
+    border: white solid 0;
+    padding: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+#buttons button img {
+    height: 75px;
+    background-color: white;
+}
+
+#buttons button img:hover {
+    border: lightskyblue dashed 2px;
+}

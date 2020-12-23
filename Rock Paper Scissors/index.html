@@ -3,93 +3,42 @@
     <head>
         <title>Rock Paper Scissors</title>
         <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+            crossorigin="anonymous">
     </head>
     <body>
+        <h1 id="title">ROCK PAPER SCISSORS</h1>
+        <div id="subtitle">
+            <h3>Human</h3> 
+            <h3 id="vs">VS</h3>
+            <h3>Computer</h3>
+        </div>
+        <div id="scores">
+            <h3 id="human-score">Score: 1</h5>
+            <h3 id="com-score">Score: 1</h5>
+        </div>
+
+        <div id="grid-container">
+            <div id="human">
+                <img src="images/person.png">
+                <div id="buttons">
+                    <button><i class="fa fa-hand-rock-o"></i></button>
+                    <button><img src="images/paper.png"></button>
+                    <button><img src="images/scissors.png"></button>
+                </div>
+            </div>
+            <div id="computer">
+                <img src="images/computer.png">
+            </div>
+        </div>
 
     </body>
-    <script>
-        function computerPlay(){
-            let choice = ['rock', 'paper', 'scissors'];
-            let randNum = Math.floor(Math.random()*choice.length);
-            return choice[randNum];
-        }
-        
-        function userPlay(){
-            let choice = prompt('Rock, Paper or Scissors?').toLowerCase();
-            return choice;
-        }
-
-        function playRound(playerSelection, computerSelection){
-            if(playerSelection == computerSelection){
-                console.log('Draw! Player and Computer selected ' + playerSelection);
-                return 0;
-            }
-            else if(playerSelection == 'rock'){
-                if(computerSelection == 'paper'){
-                    console.log('You lose! Paper beats rock');
-                    return -1;
-                }
-                else if(computerSelection == 'scissors'){
-                    console.log('You win! Rock beats scissors');
-                    return 1;
-                }
-            }
-            else if (playerSelection == 'scissors'){
-                if(computerSelection == 'rock'){
-                    console.log('You lose! Rock beats scissors');
-                    return -1;
-                }
-                else if(computerSelection == 'paper'){
-                    console.log('You win! Scissors beats paper');
-                    return 1;
-                }
-            }
-            else if (playerSelection == 'paper'){
-                if(computerSelection == 'rock'){
-                    console.log('You win! Paper beats rock');
-                    return 1;
-                }
-                else if(computerSelection == 'scissors'){
-                    console.log('You lose! Scissors beats paper');
-                    return -1;
-                }
-            }
-        }
-
-        function game(){
-            let playerScore = 0;
-            let computerScore = 0;
-            for(let i=0; i<5; i++){
-                console.log('Round ' + Number(i+1));
-                let player = userPlay();
-                let computer = computerPlay();
-                let point = playRound(player, computer);
-                switch(point){
-                    case 1:
-                        playerScore++;
-                        break;
-                    case -1:
-                        computerScore++;
-                        break;
-                    default:
-                        break;
-                }
-                console.log('Player\'s score = ' + playerScore + ', Computer\'s score = ' + computerScore);
-            }
-            if(playerScore> computerScore){
-                console.log('Player wins!');
-            }
-            else if(computerScore > playerScore) {
-                console.log('Computer wins!');
-            }
-            else{
-                console.log('Draw!');
-            }
-        }
-        
-        game();
-
-        
-    </script>
+    
 
 </html>
