@@ -1,5 +1,5 @@
-const removeFromArray = function() {
-
+const removeFromArray = function(...args) {
+    
 }
 
 module.exports = removeFromArray
