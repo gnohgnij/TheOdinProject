@@ -3,10 +3,11 @@ html, body {
     padding: 0;
 }
 
-body {
+#bg {
     background-image: url('images/bg.gif');
-    background-size: cover;
-    height: 100vh;
+    background-size: 100vw 65vh;
+    background-repeat: no-repeat;
+    height: 65vh;
 }
 
 #title {
@@ -14,12 +15,6 @@ body {
     text-align: center;
     font-size: 45px;
     margin: 0;
-}
-
-#subtitle {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 h3 {
@@ -35,30 +30,26 @@ h3 {
     border: brown solid 5px;
 }
 
-#vs {
-    color: red;
-}
-
 #scores {
     margin-top: 30px;
     display: flex;
     justify-content: space-around;
 }
 
-#grid-container {
-    margin-top: 20px;
+.grid-container {
+    margin-top: 7vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 #human img {
-    height: 250px;
+    height: 100px;
     display: block;
     margin: 0 auto;
 }
 
 #computer img {
-    height: 250px;
+    height: 100px;
     display: block;
     margin: 0 auto;
 }
@@ -72,24 +63,37 @@ button {
     background-color: transparent;
     border: none;
     padding: 0;
-    color: goldenrod;
 }
 
 button:focus {
     outline: none;
 }
 
- #human button:hover {
-    color: brown;
+#rock:hover, #paper:hover, #scissors:hover {
+    color: goldenrod;
     cursor: pointer;
 }
 
 #human-score, #com-score {
-    color: orange;
+    color: oldlace;
 }
 
 h2 {
     font-family: 'Press Start 2P', cursive;
     text-align: center;
     margin: 0;
+}
+
+i {
+    color: oldlace;
+}
+
+#com-choice {
+    display: flex;
+    justify-content: center;
+}
+
+#winner {
+    background-color: black;
+    height: 15vh;
 }

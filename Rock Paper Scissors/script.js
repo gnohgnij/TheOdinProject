@@ -14,45 +14,46 @@ function playRound(playerSelection, computerSelection){
 
     let round = Number(document.querySelector('#round').textContent);
 
+    const comChoice = document.querySelector('#com-choice');
+
     if(round<5){
-        if(playerSelection == computerSelection){
-            alert('Draw! Player and Computer selected ' + playerSelection);
-        }
-        else if(playerSelection == 'rock'){
+        if(playerSelection == 'rock'){
             if(computerSelection == 'paper'){
-                alert('You lose! Paper beats rock');
+                comChoice.innerHTML = '<i class="fas fa-hand-paper fa-4x"></i>';
                 cScore++;
-                console.log(cScore);
             }
             else if(computerSelection == 'scissors'){
-                alert('You win! Rock beats scissors');
+                comChoice.innerHTML = '<i class="fas fa-hand-scissors fa-4x"></i>';
                 pScore++;
-                console.log(pScore);
+            }
+            else if(computerSelection == 'rock'){
+                comChoice.innerHTML = '<i class="fas fa-fist-raised fa-4x"></i>';
             }
         }
         else if (playerSelection == 'scissors'){
             if(computerSelection == 'rock'){
-                alert('You lose! Rock beats scissors');
+                comChoice.innerHTML = '<i class="fas fa-fist-raised fa-4x"></i>';
                 cScore++;
-                console.log(cScore);
             }
             else if(computerSelection == 'paper'){
-                alert('You win! Scissors beats paper');
+                comChoice.innerHTML = '<i class="fas fa-hand-paper fa-4x"></i>';
                 pScore++;
-                console.log(pScore);
+            }
+            else if(computerSelection == 'scissors'){
+                comChoice.innerHTML = '<i class="fas fa-hand-scissors fa-4x"></i>';
             }
         }
         else if (playerSelection == 'paper'){
             if(computerSelection == 'rock'){
-                alert('You win! Paper beats rock');
+                comChoice.innerHTML = '<i class="fas fa-fist-raised fa-4x"></i>';
                 pScore++;
-                console.log(pScore);
-
             }
             else if(computerSelection == 'scissors'){
-                alert('You lose! Scissors beats paper');
+                comChoice.innerHTML = '<i class="fas fa-hand-scissors fa-4x"></i>';
                 cScore++;
-                console.log(cScore);
+            }
+            else if(computerSelection == 'paper'){
+                comChoice.innerHTML = '<i class="fas fa-hand-paper fa-4x"></i>';
             }
         }
         round++;
@@ -75,12 +76,13 @@ btn = document.querySelectorAll('button');
                 if(round == 5){
                     const pScore = Number(document.querySelector("#human-score").textContent);
                     const cScore = Number(document.querySelector("#com-score").textContent);
+                    const winner = document.querySelector("#winner");
                     if(pScore > cScore)
-                        alert("You win!");
+                        winner.innerHTML = '<h2 style="color: red">YOU WIN!</h2>';
                     else if(pScore == cScore)
-                        alert("Tie!");
+                        winner.innerHTML = '<h2 style="color: red">TIE!</h2>';
                     else
-                        alert("You lose!");
+                        winner.innerHTML = '<h2 style="color: red">YOU LOSE!</h2>';
                 }
             });
         });
