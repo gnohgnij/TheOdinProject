@@ -2,6 +2,6 @@
 
 This is project 2 of **The Odin Project**
 
-The task was to create a Rock, Paper, Scissors game using Javascript on console
+The task was to create a Rock, Paper, Scissors game using Javascript
 
 For more info, visit: https://www.theodinproject.com/courses/foundations/lessons/html-css
