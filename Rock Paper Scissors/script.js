@@ -19,41 +19,41 @@ function playRound(playerSelection, computerSelection){
     if(round<5){
         if(playerSelection == 'rock'){
             if(computerSelection == 'paper'){
-                comChoice.innerHTML = '<i class="fas fa-hand-paper fa-4x"></i>';
+                comChoice.innerHTML = '<i class="fas fa-hand-paper fa-4x" style="color: goldenrod;"></i>';
                 cScore++;
             }
             else if(computerSelection == 'scissors'){
-                comChoice.innerHTML = '<i class="fas fa-hand-scissors fa-4x"></i>';
+                comChoice.innerHTML = '<i class="fas fa-hand-scissors fa-4x" style="color: goldenrod;"></i>';
                 pScore++;
             }
             else if(computerSelection == 'rock'){
-                comChoice.innerHTML = '<i class="fas fa-fist-raised fa-4x"></i>';
+                comChoice.innerHTML = '<i class="fas fa-fist-raised fa-4x" style="color: goldenrod;"></i>';
             }
         }
         else if (playerSelection == 'scissors'){
             if(computerSelection == 'rock'){
-                comChoice.innerHTML = '<i class="fas fa-fist-raised fa-4x"></i>';
+                comChoice.innerHTML = '<i class="fas fa-fist-raised fa-4x" style="color: goldenrod;"></i>';
                 cScore++;
             }
             else if(computerSelection == 'paper'){
-                comChoice.innerHTML = '<i class="fas fa-hand-paper fa-4x"></i>';
+                comChoice.innerHTML = '<i class="fas fa-hand-paper fa-4x" style="color: goldenrod;"></i>';
                 pScore++;
             }
             else if(computerSelection == 'scissors'){
-                comChoice.innerHTML = '<i class="fas fa-hand-scissors fa-4x"></i>';
+                comChoice.innerHTML = '<i class="fas fa-hand-scissors fa-4x" style="color: goldenrod;"></i>';
             }
         }
         else if (playerSelection == 'paper'){
             if(computerSelection == 'rock'){
-                comChoice.innerHTML = '<i class="fas fa-fist-raised fa-4x"></i>';
+                comChoice.innerHTML = '<i class="fas fa-fist-raised fa-4x" style="color: goldenrod;"></i>';
                 pScore++;
             }
             else if(computerSelection == 'scissors'){
-                comChoice.innerHTML = '<i class="fas fa-hand-scissors fa-4x"></i>';
+                comChoice.innerHTML = '<i class="fas fa-hand-scissors fa-4x" style="color: goldenrod;"></i>';
                 cScore++;
             }
             else if(computerSelection == 'paper'){
-                comChoice.innerHTML = '<i class="fas fa-hand-paper fa-4x"></i>';
+                comChoice.innerHTML = '<i class="fas fa-hand-paper fa-4x" style="color: goldenrod;"></i>';
             }
         }
         round++;

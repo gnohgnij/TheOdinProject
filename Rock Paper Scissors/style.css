@@ -69,7 +69,7 @@ button:focus {
     outline: none;
 }
 
-#rock:hover, #paper:hover, #scissors:hover {
+#rock i:hover, #paper i:hover, #scissors i:hover {
     color: goldenrod;
     cursor: pointer;
 }
