@@ -3,16 +3,23 @@ html, body {
     padding: 0;
 }
 
+body {
+    background-image: url('images/bg.gif');
+    background-size: cover;
+    height: 100vh;
+}
+
 #title {
     font-family: 'Bungee', cursive;
     text-align: center;
-    font-size: 60px;
+    font-size: 45px;
     margin: 0;
 }
 
 #subtitle {
+    margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 h3 {
@@ -20,6 +27,12 @@ h3 {
     font-size: 20px;
     margin: 0;
     text-align: center;
+}
+
+.text {
+    background-color: gold;
+    padding: 5px;
+    border: brown solid 5px;
 }
 
 #vs {
@@ -56,20 +69,27 @@ h3 {
 }
 
 button {
-    background-color: white;
-    border: white solid 0;
+    background-color: transparent;
+    border: none;
     padding: 0;
+    color: goldenrod;
 }
 
 button:focus {
     outline: none;
 }
 
-#buttons button img {
-    height: 75px;
-    background-color: white;
+ #human button:hover {
+    color: brown;
+    cursor: pointer;
 }
 
-#buttons button img:hover {
-    border: lightskyblue dashed 2px;
+#human-score, #com-score {
+    color: orange;
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin: 0;
 }
