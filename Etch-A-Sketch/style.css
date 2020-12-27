@@ -17,16 +17,17 @@ h1 {
 
 #container-wrapper {
     height: 80vh;
-    width: 50vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
 }
 
 #container {
+    height: 400px;
+    width: 400px;
 }
 
-#buttons {
-    margin-top: 20px;
+#buttons {  
     display: flex;
     justify-content: center;
 }
