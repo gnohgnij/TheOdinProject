@@ -95,5 +95,30 @@ i {
 
 #winner {
     background-color: black;
-    height: 15vh;
+    height: 5vh;
+}
+
+#restart {
+    padding-top: 2vh;
+    height: 8vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+#restart button {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    border: goldenrod solid 2px;
+    height: 30px;
+    width: 150px;
+}
+
+#restart button:hover {
+    background-color: red;
+}
+
+#restart button:active {
+    transform: translateY(4px);
 }

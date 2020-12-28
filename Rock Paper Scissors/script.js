@@ -68,7 +68,19 @@ function playRound(playerSelection, computerSelection){
     return round;
 }
 
-let btn = document.querySelectorAll('button');
+function restartGame(){
+    const restart = document.querySelector('#restart-btn');
+    restart.addEventListener("click", function(){
+        document.querySelector('#human-score').textContent = "0";
+        document.querySelector('#com-score').textContent = "0";
+        document.querySelector('#round').textContent = "1";
+        const result = document.querySelector('#result');
+        result.remove();
+    })
+
+}
+
+let btn = document.querySelectorAll('.player-choice');
 
 btn.forEach((button) => {
     button.addEventListener('click', () => {
@@ -78,11 +90,13 @@ btn.forEach((button) => {
             const cScore = Number(document.querySelector("#com-score").textContent);
             const winner = document.querySelector("#winner");
             if(pScore > cScore)
-                winner.innerHTML = '<h2 style="color: red">YOU WIN!</h2>';
+                winner.innerHTML = '<h2 id="result" style="color: red">YOU WIN!</h2>';
             else if(pScore == cScore)
-                winner.innerHTML = '<h2 style="color: red">TIE!</h2>';
+                winner.innerHTML = '<h2 id="result" style="color: red">TIE!</h2>';
             else
-                winner.innerHTML = '<h2 style="color: red">YOU LOSE!</h2>';
+                winner.innerHTML = '<h2 id="result" style="color: red">YOU LOSE!</h2>';
         }
     });
 });
+
+restartGame();
