@@ -6,7 +6,7 @@ html, body {
 }
 
 #heading {
-    height: 10vh;
+    height: 30vh;
 }
 
 h1 {
@@ -15,9 +15,11 @@ h1 {
     margin: 2.5vh 0;
 }
 
+h3 {
+    text-align: center;
+}
+
 #container-wrapper {
-    height: 80vh;
-    width: 100vw;
     display: flex;
     justify-content: center;
 }
@@ -28,6 +30,36 @@ h1 {
 }
 
 #buttons {  
+    margin: 20px 0;
     display: flex;
     justify-content: center;
+}
+
+button {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5%;
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+button:focus {
+    outline: none;
+}
+
+#rainbow-color {
+    background: hsla(0, 97%, 65%, 1);
+
+    background: linear-gradient(90deg, hsla(0, 97%, 65%, 1) 0%, hsla(20, 57%, 51%, 1) 21%, hsla(54, 43%, 55%, 1) 41%, hsla(187, 21%, 61%, 1) 60%, hsla(256, 49%, 63%, 1) 78%, hsla(255, 73%, 60%, 1) 91%, hsla(272, 96%, 56%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(0, 97%, 65%, 1) 0%, hsla(20, 57%, 51%, 1) 21%, hsla(54, 43%, 55%, 1) 41%, hsla(187, 21%, 61%, 1) 60%, hsla(256, 49%, 63%, 1) 78%, hsla(255, 73%, 60%, 1) 91%, hsla(272, 96%, 56%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(0, 97%, 65%, 1) 0%, hsla(20, 57%, 51%, 1) 21%, hsla(54, 43%, 55%, 1) 41%, hsla(187, 21%, 61%, 1) 60%, hsla(256, 49%, 63%, 1) 78%, hsla(255, 73%, 60%, 1) 91%, hsla(272, 96%, 56%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FC5151", endColorstr="#C96A3A", GradientType=1 );
 }

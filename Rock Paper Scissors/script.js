@@ -68,21 +68,21 @@ function playRound(playerSelection, computerSelection){
     return round;
 }
 
-btn = document.querySelectorAll('button');
+let btn = document.querySelectorAll('button');
 
-        btn.forEach((button) => {
-            button.addEventListener('click', () => {
-                const round = playRound(button.id, computerPlay());
-                if(round == 5){
-                    const pScore = Number(document.querySelector("#human-score").textContent);
-                    const cScore = Number(document.querySelector("#com-score").textContent);
-                    const winner = document.querySelector("#winner");
-                    if(pScore > cScore)
-                        winner.innerHTML = '<h2 style="color: red">YOU WIN!</h2>';
-                    else if(pScore == cScore)
-                        winner.innerHTML = '<h2 style="color: red">TIE!</h2>';
-                    else
-                        winner.innerHTML = '<h2 style="color: red">YOU LOSE!</h2>';
-                }
-            });
-        });
+btn.forEach((button) => {
+    button.addEventListener('click', () => {
+        const round = playRound(button.id, computerPlay());
+        if(round == 5){
+            const pScore = Number(document.querySelector("#human-score").textContent);
+            const cScore = Number(document.querySelector("#com-score").textContent);
+            const winner = document.querySelector("#winner");
+            if(pScore > cScore)
+                winner.innerHTML = '<h2 style="color: red">YOU WIN!</h2>';
+            else if(pScore == cScore)
+                winner.innerHTML = '<h2 style="color: red">TIE!</h2>';
+            else
+                winner.innerHTML = '<h2 style="color: red">YOU LOSE!</h2>';
+        }
+    });
+});
