@@ -2,7 +2,7 @@
 
 This repo will serve as a menu for the different projects that are part of the Odin Project Curriculum
 
-https://gnohgnij.github.io/Odin/
+https://gnohgnij.github.io/TheOdinProject/
 
 Click on the links to see the projects
 
