@@ -7,29 +7,27 @@ body {
     background-color: rgb(220, 220, 221);
 }
 
-header h1 {
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-}
-
 #calculator-wrapper {
     border: solid rgb(76, 92, 104) 3px;
     height: 80vh;
     width: 40vw;
     display: block;
-    margin: 0 auto;
+    margin: 9vh auto;
     background-color: rgb(76, 92, 104);
+    
 }
 
 #calculator {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 11vh);
 }
 
 #calculator button {
     background-color: rgb(25, 133, 161);
     border: solid rgb(76, 92, 104) 3px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 3rem;
 }
 
 #calculator button:active {
@@ -40,20 +38,38 @@ header h1 {
     outline: none;
 }
 
-#clear {
+#calculator #clear {
     grid-column-start: 1;
     grid-column-end: 3;
+    background-color:#e76f51;
 }
 
-#delete {
+#calculator #delete {
     grid-column-start: 3;
     grid-column-end: 5;
+    background-color:#e76f51;
 }
 
-#screen {
+#output {
     grid-column-start: 1;
     grid-column-end: 5;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 2;
     color: rgb(220, 220, 221);
+    text-align: left;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 4rem;
+    padding: 0 10px;
+}
+
+#input {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    color: rgb(220, 220, 221);
+    text-align: left;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 4rem;
+    padding: 0 10px;
 }
