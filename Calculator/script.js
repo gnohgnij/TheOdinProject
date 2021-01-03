@@ -65,89 +65,102 @@ clear.addEventListener("click", function(){
     num2 = undefined;
 })
 
-const plusBtn = document.querySelector("#plus");
-plusBtn.addEventListener("click", function(){
-    input.innerHTML += "+";
-    let strLen = input.textContent.length;
-    if(num1 == undefined && num2 == undefined){
-        num1 = Number(input.textContent.substring(0, strLen-1));
-        output.innerHTML += input.innerHTML;
+const plus = document.querySelector("#plus");
+plus.addEventListener("click", function(){
+    if(num1 == undefined && num2 == undefined){ //set num1
+        num1 = +Number(input.innerHTML).toFixed(4);
+        output.innerHTML = input.innerHTML + "+";
+        input.innerHTML = "";
     }
-    else if(num1 != undefined && num2 == undefined || num1 != undefined && num2 != undefined){
-        num2 = Number(input.textContent.substring(0, strLen-1));
-        output.innerHTML = operate(plusBtn.id, num1, num2) + "+";
-        num1 = operate(plusBtn.id, num1, num2);
+    else if(num1 != undefined && num2 == undefined){    //chained operation
+        num2 = +Number(input.innerHTML).toFixed(4);
+        output.innerHTML = +Number(operate("+", num1, num2)) + "+";
+        num1 = +Number(operate("+", num1, num2));
+        input.innerHTML = "";
     }
-    input.innerHTML = "";
-});
+    else if(num1 != undefined && num2 != undefined){    //chain operation
+        num2 = +Number(input.innerHTML).toFixed(4);
+        output.innerHTML = +Number(operate("+", num1, num2)) + "+";
+        num1 = +Number(operate("+", num1, num2));
+        input.innerHTML = "";
+    }
+})
 
 const minusBtn = document.querySelector("#minus");
 minusBtn.addEventListener("click", function(){
-    input.innerHTML += "-";
-    let strLen = input.textContent.length;
-    if(num1 == undefined && num2 == undefined){
-        num1 = Number(input.textContent.substring(0, strLen-1));
-        output.innerHTML += input.innerHTML;
+    if(num1 == undefined && num2 == undefined){ //set num1
+        num1 = +Number(input.innerHTML).toFixed(4);
+        output.innerHTML = input.innerHTML + "-";
+        input.innerHTML = "";
     }
-    else if(num1 != undefined && num2 == undefined || num1 != undefined && num2 != undefined){
-        num2 = Number(input.textContent.substring(0, strLen-1));
-        output.innerHTML = operate(minusBtn.id, num1, num2) + "-";
-        num1 = operate(minusBtn.id, num1, num2);
+    else if(num1 != undefined && num2 == undefined){    //chained operation
+        num2 = +Number(input.innerHTML).toFixed(4);
+        output.innerHTML = +Number(operate("-", num1, num2)) + "-";
+        num1 = +Number(operate("-", num1, num2));
+        input.innerHTML = "";
     }
-    input.innerHTML = "";
+    else if(num1 != undefined && num2 != undefined){    //chain operation
+        num2 = +Number(input.innerHTML).toFixed(4);
+        output.innerHTML = +Number(operate("-", num1, num2)) + "-";
+        num1 = +Number(operate("-", num1, num2));
+        input.innerHTML = "";
+    }
 });
 
 const multiplyBtn = document.querySelector("#multiply");
 multiplyBtn.addEventListener("click", function(){
-    input.innerHTML += "*";
-    let strLen = input.textContent.length;
-    if(num1 == undefined && num2 == undefined){
-        num1 = +Number(input.textContent.substring(0, strLen-1)).toFixed(4);
-        output.innerHTML += input.innerHTML;
+    if(num1 == undefined && num2 == undefined){ //set num1
+        num1 = +Number(input.innerHTML).toFixed(4);
+        output.innerHTML = input.innerHTML + "*";
+        input.innerHTML = "";
     }
-    else if(num1 != undefined && num2 == undefined || num1 != undefined && num2 != undefined){
-        num2 = +Number(input.textContent.substring(0, strLen-1)).toFixed(4);
-        output.innerHTML = +operate(multiplyBtn.id, num1, num2).toFixed(4) + "*";
-        num1 = +operate(multiplyBtn.id, num1, num2).toFixed(4);
+    else if(num1 != undefined && num2 == undefined){    //chained operation
+        num2 = +Number(input.innerHTML).toFixed(4);
+        output.innerHTML = +Number(operate("*", num1, num2)) + "*";
+        num1 = +Number(operate("*", num1, num2));
+        input.innerHTML = "";
     }
-    input.innerHTML = "";
+    else if(num1 != undefined && num2 != undefined && !output.innerHTML.includes("*")){    //chain operation
+        output.innerHTML += "*"; 
+    }
+    else if(num1 != undefined && num2 != undefined){    //chain operation
+        num2 = +Number(input.innerHTML).toFixed(4);
+        output.innerHTML = +Number(operate("*", num1, num2)) + "*";
+        num1 = +Number(operate("*", num1, num2));
+        input.innerHTML = "";
+    }
 });
 
 const divideBtn = document.querySelector("#divide");
 divideBtn.addEventListener("click", function(){
-    input.innerHTML += "/";
-    let strLen = input.textContent.length;
-    if(num1 == undefined && num2 == undefined){
-        num1 = +Number(input.textContent.substring(0, strLen-1)).toFixed(4);
-        output.innerHTML += input.innerHTML;
+    if(num1 == undefined && num2 == undefined){ //set num1
+        num1 = +Number(input.innerHTML).toFixed(4);
+        output.innerHTML = input.innerHTML + "/";
+        input.innerHTML = "";
     }
-    else if(num1 != undefined && num2 == undefined || num1 != undefined && num2 != undefined){
-        num2 = +Number(input.textContent.substring(0, strLen-1)).toFixed(4);
-        if(operate(divideBtn.id, num1, num2) == "Error"){
-            output.innerHTML = operate(divideBtn.id, num1, num2);
-            num1 = undefined;
-            num2 = undefined;
-        }
-        else{
-            output.innerHTML = +operate(divideBtn.id, num1, num2).toFixed(4) + "/";
-            num1 = +operate(divideBtn.id, num1, num2).toFixed(4);
-        }
-        
+    else if(num1 != undefined && num2 == undefined){    //chained operation
+        num2 = +Number(input.innerHTML).toFixed(4);
+        output.innerHTML = +Number(operate("/", num1, num2)) + "/";
+        num1 = +Number(operate("/", num1, num2));
+        input.innerHTML = "";
     }
-    input.innerHTML = "";
+    else if(num1 != undefined && num2 != undefined && !output.innerHTML.includes("/")){    //chain operation
+        output.innerHTML += "/"; 
+    }
+    else if(num1 != undefined && num2 != undefined){    //chain operation
+        num2 = +Number(input.innerHTML).toFixed(4);
+        output.innerHTML = +Number(operate("/", num1, num2)) + "/";
+        num1 = +Number(operate("/", num1, num2));
+        input.innerHTML = "";
+    }
 });
 
 const equalBtn = document.querySelector("#equal");
 equalBtn.addEventListener("click", function(){
-    let strLen = input.textContent.length;
-    if(num1 != undefined && num2 == undefined || num1 != undefined && num2 != undefined){
-        num2 = +Number(input.textContent.substring(0, strLen)).toFixed(4);
-        let outputLen = output.innerHTML.length;
-        let operator = output.innerHTML.substring(outputLen-1, outputLen);
-        output.innerHTML = +operate(operator, num1, num2).toFixed(4);
-        input.innerHTML = "";
-        num1 = undefined;
-        num2 = undefined;
-    }
-    
+    let outputLen = output.innerHTML.length;
+    num2 = +Number(input.innerHTML).toFixed(4); //num1 already assigned
+    let operator = output.innerHTML.substring(outputLen-1, outputLen);
+    output.innerHTML = +Number(operate(operator, num1, num2));
+    num1 = +Number(operate(operator, num1, num2));
+    input.innerHTML = "";
 });
