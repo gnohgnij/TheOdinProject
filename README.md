@@ -1,9 +1,3 @@
 # The Odin Project
 
-This repo will serve as a menu for the different projects that are part of the Odin Project Curriculum
-
-https://gnohgnij.github.io/TheOdinProject/
-
-Click on the links to see the projects
-
-For more info, visit: https://www.theodinproject.com/courses/foundations/lessons/html-css
+Project submissions for the [Foundations Course](https://www.theodinproject.com/paths/foundations/courses/foundations) by The Odin Project.
